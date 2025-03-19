@@ -3,6 +3,13 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Framework: Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B.svg)](https://streamlit.io/)
+[![Model: Transformers](https://img.shields.io/badge/Model-Transformers-green.svg)](https://huggingface.co/transformers/)
+[![GPU: CUDA](https://img.shields.io/badge/GPU-CUDA-red.svg)](https://developer.nvidia.com/cuda-zone)
+[![Embeddings: Sentence-BERT](https://img.shields.io/badge/Embeddings-SBERT-orange.svg)](https://www.sbert.net/)
+[![Database: FAISS](https://img.shields.io/badge/Database-FAISS-blueviolet.svg)](https://faiss.ai/)
+[![NLP: Hugging Face](https://img.shields.io/badge/NLP-HuggingFace-yellow.svg)](https://huggingface.co/)
+[![License: Open Source](https://img.shields.io/badge/License-OpenSource-brightgreen.svg)](https://opensource.org/)
+
 
 A private document analysis system using Retrieval-Augmented Generation (RAG) architecture. Supports PDF, DOCX, and PPTX files with state-of-the-art language models.
 
