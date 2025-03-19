@@ -31,76 +31,92 @@ pip install -r requirements.txt
 # Download models (example path)
 wget https://example.com/models/DeepSeek-R1-Distill-Qwen-1.5B.zip
 unzip DeepSeek-R1-Distill-Qwen-1.5B.zip -d ./models/
+```
 
-Usage
+## Usage
+
+```bash
 # Start the application
 streamlit run app.py
+```
 
-Basic Workflow
-Upload documents through the sidebar
+### Basic Workflow
 
-Wait for processing completion (see progress indicators)
+1. Upload documents through the sidebar.
+2. Wait for processing completion (see progress indicators).
+3. Ask questions in natural language.
+4. View responses with source context.
 
-Ask questions in natural language
+## Configuration
 
-View responses with source context
+### Model Selection
+Edit `config.yaml`:
 
-Configuration
-Model Selection
-Edit config.yaml:
-
+```yaml
 models:
   default: "DeepSeek-R1-Distill-Qwen-1.5B"
   paths:
     DeepSeek: "./models/DeepSeek-R1-Distill-Qwen-1.5B"
     Gemma: "./models/gemma-3-1b-it"
+```
 
-Advanced Settings
-# In app.py
+### Advanced Settings
+
+Modify `app.py`:
+
+```python
 class DocumentRAG:
     def __init__(self):
         self.chunk_size = 1500  # Context window size
         self.overlap = 200      # Chunk overlap
         self.top_k = 5          # Retrieved context chunks
+```
 
-Technical Specifications
-Document Processing Pipeline
-Stage	Technology	Description
-Text Extraction	PyMuPDF	Fast PDF text extraction
-Chunking	Sentence Transformers	Semantic text segmentation
-Embedding	MiniLM-L6	384-dimension embeddings
-Indexing	FAISS-IVF	Efficient similarity search
-Generation	Causal LMs	Context-aware responses
-Performance Metrics
-Operation	CPU (i9)	GPU (V100)
-PDF Processing	2.1s/page	1.8s/page
-Embedding	45ms/chunk	12ms/chunk
-Query Response	3-5s	0.8-1.2s
-Troubleshooting
-Common Issues:
+## Technical Specifications
 
-markdown
-Copy
-1. **CUDA Out of Memory**:
-   - Reduce `chunk_size` in config
-   - Use smaller batch sizes
+### Document Processing Pipeline
 
-2. **Missing Dependencies**:
-   ```bash
-   pip install --force-reinstall -r requirements.txt
-Model Loading Errors:
+| Stage             | Technology            | Description                     |
+|------------------|----------------------|---------------------------------|
+| Text Extraction  | PyMuPDF               | Fast PDF text extraction       |
+| Chunking        | Sentence Transformers | Semantic text segmentation     |
+| Embedding       | MiniLM-L6             | 384-dimension embeddings       |
+| Indexing        | FAISS-IVF             | Efficient similarity search    |
+| Generation      | Causal LMs            | Context-aware responses        |
 
-Verify model file integrity
+### Performance Metrics
 
-Check Hugging Face token permissions
+| Operation        | CPU (i9)  | GPU (V100)  |
+|-----------------|----------|------------|
+| PDF Processing  | 2.1s/page | 1.8s/page  |
+| Embedding       | 45ms/chunk | 12ms/chunk |
+| Query Response  | 3-5s      | 0.8-1.2s   |
 
-Copy
+## Troubleshooting
+
+### Common Issues
+
+#### 1. CUDA Out of Memory
+- Reduce `chunk_size` in config.
+- Use smaller batch sizes.
+
+#### 2. Missing Dependencies
+
+```bash
+pip install --force-reinstall -r requirements.txt
+```
+
+#### 3. Model Loading Errors
+- Verify model file integrity.
+- Check Hugging Face token permissions.
 
 ## License
-MIT License - See [LICENSE](LICENSE) for details
+
+MIT License - See [LICENSE](LICENSE) for details.
 
 ## Contributing
+
 Pull requests welcome! Please follow our [contribution guidelines](CONTRIBUTING.md).
 
 ---
-**Note**: Requires minimum 8GB VRAM for GPU operation with default models
+**Note**: Requires a minimum of 8GB VRAM for GPU operation with default models.
