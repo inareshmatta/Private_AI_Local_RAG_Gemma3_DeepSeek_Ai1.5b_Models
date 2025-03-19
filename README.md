@@ -15,7 +15,7 @@
 
 A private document analysis system using Retrieval-Augmented Generation (RAG) architecture. Supports PDF, DOCX, and PPTX files with state-of-the-art language models.
 
-![System Architecture](https://via.placeholder.com/800x400.png?text=System+Architecture+Diagram)
+![System Architecture](https://github.com/inareshmatta/Private_AI_Local_RAG_Gemma3_DeepSeek_Ai1.5b_Models/blob/main/architecture_diagram.png)
 
 ## Features
 
