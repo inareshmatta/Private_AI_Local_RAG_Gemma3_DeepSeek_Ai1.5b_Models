@@ -9,6 +9,8 @@
 [![Database: FAISS](https://img.shields.io/badge/Database-FAISS-blueviolet.svg)](https://faiss.ai/)
 [![NLP: Hugging Face](https://img.shields.io/badge/NLP-HuggingFace-yellow.svg)](https://huggingface.co/)
 [![License: Open Source](https://img.shields.io/badge/License-OpenSource-brightgreen.svg)](https://opensource.org/)
+[![Model: DeepSeek](https://img.shields.io/badge/Model-DeepSeek_R1_Qwen_1.5B-blue.svg)](https://huggingface.co/deepseek-ai)
+[![Model: Gemma](https://img.shields.io/badge/Model-Gemma_3_1B_IT-red.svg)](https://ai.google.dev/gemma)
 
 
 A private document analysis system using Retrieval-Augmented Generation (RAG) architecture. Supports PDF, DOCX, and PPTX files with state-of-the-art language models.
