@@ -38,8 +38,8 @@ cd private-ai
 pip install -r requirements.txt
 
 # Download models (example path)
-wget https://example.com/models/DeepSeek-R1-Distill-Qwen-1.5B.zip
-unzip DeepSeek-R1-Distill-Qwen-1.5B.zip -d ./models/
+[deepseekr1](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B)
+[gemma3](https://huggingface.co/google/gemma-3-1b-it)
 ```
 
 ## Usage
